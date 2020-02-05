@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TaskList.BLL\TaskList.BLL.csproj" />
+      <ProjectReference Include="..\TaskList.DAL\TaskList.DAL.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
+      <PackageReference Include="NSwag.AspNetCore" Version="13.2.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="appsettings.Development.json">
+        <DependentUpon>appsettings.json</DependentUpon>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="ViewModels\SortOrderViewModelHelper.cs">
+        <DependentUpon>SortOrderViewModel.cs</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+</Project>
